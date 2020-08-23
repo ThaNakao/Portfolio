@@ -1,10 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@1,300;1,400&family=Baloo+2:wght@400;500;600&family=Cinzel&family=Germania+One&family=Girassol&family=Josefin+Slab:wght@100;300;400;700&family=Milonga&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fauna+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nixie+One&family=Oswald:wght@300;400&family=Oxygen:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;0,800;1,800;1,900&family=Quattrocento&family=Rufina:wght@700&display=swap);
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css);
 
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --font-primary: "Playfair Display", serif;
+    --font-secundary: "Fauna One", serif;
+    --font-action: "Quattrocento", serif;
+}
+
+.hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+
 }
 
 header{
@@ -46,7 +74,7 @@ header{
 .banner h1{
     color: blanchedalmond;
     font-size: 3.5rem;
-    font-family: serif;
+    font-family: var(--font-primary);
     font-weight: 200;
     text-shadow: .3rem .4rem 2px rgba(0, 0, 0, .4);
     margin-bottom: 1rem;
@@ -55,9 +83,9 @@ header{
 }
 
 .banner p{
-    font-family: "Josefin Slab", serif;
+    font-family: var(--font-secundary);
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-shadow: .2rem .2rem rgba(0, 0, 0, .4);
     margin-bottom: 1rem;
     opacity: 0;
@@ -65,7 +93,7 @@ header{
 }
 
 .banner button{
-    font-family: serif;
+    font-family: var(--font-action);
     color: #000;
     font-size: 1rem;
     background: #333333;  /* fallback for old browsers */
@@ -89,3 +117,63 @@ header{
     }
 }
 
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+}
+
+.sidebar.show-menu{
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.menu-link{
+    font-family: var(--font-action);
+    font-size: 2rem;
+    color:rgb(122, 8, 8);
+    transition: color 1s;
+}
+
+.menu-link:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.social-media{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i{
+    color: rgb(122, 8, 8);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 1s;
+}
+
+.social-media i:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+        
